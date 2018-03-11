@@ -84,7 +84,7 @@ public class Cancolapi extends JFrame
         			Objectes.AfegirObjectes(controladorJoc.getPersonatge().getObjectes());
         		}
         		else {
-        			missatge = "No hi han objectes a l'habitació.";
+        			missatge = "No hi ha objectes a l'habitació.";
         		}
         		
         		Missatges.setMissatge(missatge);

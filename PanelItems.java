@@ -64,6 +64,7 @@ public class PanelItems extends JPanel{
 	}
 	
 	public void AfegirObjectes(ArrayList<Objecte> objectes) {
+		itemsActius=new ArrayList <String>();
 		for (int i=0; i<objectes.size(); i++) {
 			itemsActius.add(objectes.get(i).getNom());
 		}
