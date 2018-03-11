@@ -11,9 +11,9 @@ public class Cancolapi extends JFrame
 {
 
 	private static PanellHabitacio Habitacio;
-	private static PanelMissatges Missatges;
+	private static PanellMissatges Missatges;
 	private static PanelItems Objectes;
-	private static JPanel Controles;
+	private static JPanel Controls;
     
     private static ControladorJoc controladorJoc;
        
@@ -23,8 +23,8 @@ public class Cancolapi extends JFrame
         JPanel Pantalla = new JPanel();
         Habitacio = new PanellHabitacio(1200, 500);
         Objectes = new PanelItems(280, 500);
-        Controles = new JPanel();
-        Missatges = new PanelMissatges();
+        Controls = new JPanel();
+        Missatges = new PanellMissatges();
         
         // test llista items
         /*
@@ -35,7 +35,7 @@ public class Cancolapi extends JFrame
         */
         
         //assignem layout
-        Controles.setLayout(new FlowLayout());
+        Controls.setLayout(new FlowLayout());
         //inicialtzem els botons
         JButton MoureAdalt = new JButton("Dalt");
         JButton MoureAbaix = new JButton("Baix");
@@ -45,13 +45,13 @@ public class Cancolapi extends JFrame
         JButton Donar = new JButton("Donar");
         JButton Usar = new JButton("Usar");
         //afegim els botons al panell
-        Controles.add(MoureEsquerra);
-        Controles.add(MoureAdalt);
-        Controles.add(MoureAbaix);
-        Controles.add(MoureDreta);
-        Controles.add(AgafarObjecte);
-        Controles.add(Donar);
-        Controles.add(Usar);
+        Controls.add(MoureEsquerra);
+        Controls.add(MoureAdalt);
+        Controls.add(MoureAbaix);
+        Controls.add(MoureDreta);
+        Controls.add(AgafarObjecte);
+        Controls.add(Donar);
+        Controls.add(Usar);
         
         //assignaem als botons els esdeveniments segons el moviment, en aquest cas el clickar al botó.
         MoureEsquerra.addActionListener(new ActionListener() {
@@ -92,11 +92,12 @@ public class Cancolapi extends JFrame
         });
         Donar.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-       
+        		//emfaltatempsjodeeeer
         	}
         });
         Usar.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
+        		//emfaltatempsjodeeeer
         	}
         });
                
@@ -108,14 +109,14 @@ public class Cancolapi extends JFrame
         Pantalla.add(Habitacio);
         Pantalla.add(Objectes);
         Pantalla.add(Missatges);
-        Pantalla.add(Controles);
+        Pantalla.add(Controls);
         
         
-        //assignem mides i posició dins del panell principal (pantalla)
+        //assignem mides i posició dins del panell principal
         Habitacio.setBounds(10, 10, 1200, 500);
         Missatges.setBounds(10, 520, 1500, 110);
         Objectes.setBounds(1205, 10, 280, 500);
-        Controles.setBounds(10, 650, 1500, 230);      
+        Controls.setBounds(10, 650, 1500, 230);      
         
     	setResizable(false);
         setVisible(true);
@@ -138,8 +139,7 @@ public class Cancolapi extends JFrame
     	int numeroNovaHabitacio = controladorJoc.mourePersonatge(direccio);
     	// si el personatge s'ha mogut cridem la funcio que fa que l'apartat grafic s'actualitzi amb la nova imatge
     	if (numeroHabitacioActual != numeroNovaHabitacio) {
-    		Habitacio.setHabitacioActual(numeroNovaHabitacio);
-    		
+    		Habitacio.setHabitacioActual(numeroNovaHabitacio);	
     	}
     	
     }

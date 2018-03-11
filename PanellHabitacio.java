@@ -7,6 +7,7 @@ import java.awt.Image;
 import javax.swing.*;
 
 public class PanellHabitacio extends JPanel {
+	
 	private Image imatgeActual;
 	private int ample;
 	private int alcada;
@@ -28,6 +29,7 @@ public class PanellHabitacio extends JPanel {
 	@Override
 	//paintcomponent es crida sol, no permet cridar-ho directament i s'encarrega de pinater els elements gràfics.
 	public void paintComponent(Graphics g) {
+		
 		//pintem en el component gràfic la imatge de la habitació amb les mides que li donem
 		g.drawImage(imatgeActual, 0, 0, ample, alcada, null);
 		//g.drawImage(imatgeActual, 100, 100, ample-200, alcada-200, null);	

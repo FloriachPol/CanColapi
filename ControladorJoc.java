@@ -160,13 +160,13 @@ public class ControladorJoc {
 		ArrayList<Enemic> enemics;
 		
 		// Habitació 1. Cantonada a dalt a l'esquerra 
-		portes = inicialitzarPortesHabitacio(false, true, false, true);
+		portes = inicialitzarPortesHabitacio(false, true, false, false);
 		enemics = new ArrayList<Enemic>();
 		habitacio = new Habitacio(portes, null, enemics);
 		habitacionsInicials.add(habitacio);
 		
 		// Habitació 2. A dalt centre
-		portes = inicialitzarPortesHabitacio(false, true, true, true);
+		portes = inicialitzarPortesHabitacio(false, true, false, false);
 		//creem l'objecte objecte
 		Objecte os = new Objecte("Os");
 		enemics = new ArrayList<Enemic>();
@@ -174,7 +174,7 @@ public class ControladorJoc {
 		habitacionsInicials.add(habitacio);
 		
 		// Habitació 3. A dalt a la dreta
-		portes = inicialitzarPortesHabitacio(false, true, true, false);
+		portes = inicialitzarPortesHabitacio(false, true, false, false);
 		Objecte clau = new Objecte("Clau");		
 		enemics = new ArrayList<Enemic>();
 		Enemic fantasma = new Enemic("fantasma");
